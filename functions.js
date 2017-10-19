@@ -59,41 +59,110 @@
 // console.log(duplicate([1,1,2,3,1,2,3]));
 
 //5
-//split into individual letter
-// turn into array
-//put the letter onto the back of array
-//add ay on back of array 
-//turn back into string
+// turn each word into an array
+// use split to take the first letter off each new array
+// hold the letter in a variable
+// push the variable to the end of the new arrays
 
-
-var pigLatin = function(words) {
-	var newWords = words.split(' ');
-	var pig = '';
-	for(var i = 0; i < newWords.length; i++){
-		newWords[i] += newWords[i][0];
-		newWords[i] = newWords[i].slice[1];
-		words[i] += 'ay';
-		pig += newWords[i];
-		return pig;
-	}
-
-
-	// var newWords;     //variable to hold new sentence
-	// var temp = words.split(''); //variable that holds original sentence split into an array of individual letters
-	// newWords = temp.shift();
-	// return newWords;
-
-
-	// newWords.push(temp[0]);  // takes the first index and ads it to variable new words
-	// return newWords + 'ay';  // puts ay on the end of new words and returns it
-}
-console.log(pigLatin("The quick brown fox"));
+// var pigLatin = function(words) {
+//   var newWords = words.split(" ");
+//   var sentence = "";
+//   for(i = 0; i < newWords.length; i++){
+//	   newWords[i] += newWords[i][0];  
+//     newWords[i] = newWords[i].slice(1);
+//     newWords[i] += "ay";
+//     sentence += " " + newWords[i];
+//   }
+//   return sentence.trim();
+// }
+// console.log(pigLatin("The quick brown fox"));
 
 //6
+// var compare = function(array1, array2){
+// 	for(var j = 0; j < array1.length; j++){
+// 		for(var i = 0; i < array2.length; i++) {
+// 			if(array1.length !== array2.length){
+// 			return false;
+// 			}
+// 			else if (array1[j] === array2[i]) {
+// 			//else if(array1.includes(array2[i])) {
+// 				return true;
+// 			}
+// 			else {
+// 				return false;
+// 			}
+// 		}
+// 	} 
+// }
+// console.log(compare([2, 3, 4], [1, 2, 3]))
 
-var compare = function(){
-	
+
+//7
+// var cutOff = function(array, value) {
+
+// 	for(var i = 0; i < array.length; i++) {
+// 		if(array[i] === value)
+// 			return array[i];
+// 	}
+// 	var newArr = array.splice(value, 3, value)
+// 	return newArr;
+// 	var num = array.length - value;
+// 	var newArr = array.slice(0,value);
+// 	newArr.push(value)
+// 	return newArr;
+// }
+
+// console.log(cutOff([1,2,3,4,5,6,7,8] , 4));
+
+//8
+//while loop
+// var random = function() {
+// 	var arr =[];
+// 	while (arr.length < 10) {
+// 		var num = (Math.floor(Math.random()*101));
+// 		if(arr.indexOf(num) === -1) {
+// 			arr.push(num);
+// 		}
+// 	}
+// 	return arr;
+// }
+// console.log(random());
+
+//9
+// var sortedList = function(array1, array2) {
+// 	var newArr = array1.concat(array2);
+// 	newArr.sort(function(a,b){
+// 		return a-b;
+// 	})
+// 	return newArr;
+// }
+
+//10
+
+// var combine = function(array1, array2) {
+// 	if (array1.length > array2.length){
+// 		var newArr = array1.concat(array2)
+// 	}
+// 	else {
+// 		var newArr = array2.concat(array1);
+// 	}
+// 	return newArr;
+// }
+// console.log(combine(['four', 'eleven'], ['cat', 'bat', 'dolphin']));
+
+//11
+//create random number under 1
+//turn number into a string
+//loop through string to find 3s, and 7s
+//replace the 3s and 7s with 8s and 1s
+//turn string back into number
+var random = function() {
+	var number = Math.random();
+	var string = number.toString();
+	var rep = string.replace(/[3]/g,8);
+	return rep;
 }
+console.log(random());
 
 
 
