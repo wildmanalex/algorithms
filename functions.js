@@ -159,8 +159,9 @@
 var random = function() {
 	var number = Math.random();
 	var string = number.toString();
-	var rep = string.replace(/[3]/g,8);
-	return rep;
+	var replaceThree = string.replace(/[3]/g,8);
+	var replaceSeven = replaceThree.replace(/[7]/g, 1);
+	return replaceSeven;
 }
 console.log(random());
 
