@@ -156,14 +156,49 @@
 //loop through string to find 3s, and 7s
 //replace the 3s and 7s with 8s and 1s
 //turn string back into number
-var random = function() {
-	var number = Math.random();
-	var string = number.toString();
-	var replaceThree = string.replace(/[3]/g,8);
-	var replaceSeven = replaceThree.replace(/[7]/g, 1);
-	return replaceSeven;
+// var random = function() {
+// 	var number = Math.random();
+// 	var string = number.toString();
+// 	var replaceThree = string.replace(/[3]/g,8);
+// 	var replaceSeven = replaceThree.replace(/[7]/g, 1);
+// 	return replaceSeven;
+// }
+// console.log(random());
+
+//12
+// var findLongest = function(string) {
+// 	var longest = string.split(' ').sort(function(a,b){
+// 		return b.length - a.length;
+// 	});
+// 	return longest[0];
+// }
+// 	console.log(findLongest("I ate toast for breakfast"));
+
+//13
+
+// var capitalize = function(sentence) {
+	
+// }
+// console.log(capitalize("I ate toast for breakfast"));
+
+
+
+//16
+// need to make negatives false
+var wholeNum = function(num) {
+	if(Math.sign(num) === '-') {
+		return false;
+	}
+	else {
+	var answer = Number.isInteger(num);
+	return answer;
+	}
 }
-console.log(random());
+console.log(wholeNum(-5));
 
+// 17
 
-
+// var randomNum = function() {
+// 	return Math.floor(Math.random() * 10);
+// }
+// console.log(randomNum());
