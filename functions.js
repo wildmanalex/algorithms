@@ -176,17 +176,27 @@
 
 //13
 
-// var capitalize = function(sentence) {
+var capitalize = function(sentence) {
 	
-// }
-// console.log(capitalize("I ate toast for breakfast"));
+}
+console.log(capitalize("I ate toast for breakfast"));
+
+//14 
+create 3 variables to hold the days, months and years and compare the two dates
+
+var daysBetween = function(date1, date2) {
+	whole 
+	var years = 
+}
+//15
+
 
 
 
 //16
 // need to make negatives false
 var wholeNum = function(num) {
-	if(Math.sign(num) === '-') {
+	if(Math.sign(num) === -1) {
 		return false;
 	}
 	else {
