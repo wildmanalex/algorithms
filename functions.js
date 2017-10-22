@@ -177,34 +177,36 @@
 //13
 
 var capitalize = function(sentence) {
-	
+	var temp = sentence.toLowerCase().split(' ').map(function(word) {
+		 return word.replace(word[0], word[0].toUpperCase());
+	})
+	return temp.join(' ');
 }
 console.log(capitalize("I ate toast for breakfast"));
 
 //14 
-create 3 variables to hold the days, months and years and compare the two dates
+// create 3 variables to hold the days, months and years and compare the two dates
 
-var daysBetween = function(date1, date2) {
-	whole 
-	var years = 
-}
+// var daysBetween = function(date1, date2) {
+// 	var years = 
+// 	var months = 
+// 	var days =
+// }
+
 //15
-
-
-
 
 //16
 // need to make negatives false
-var wholeNum = function(num) {
-	if(Math.sign(num) === -1) {
-		return false;
-	}
-	else {
-	var answer = Number.isInteger(num);
-	return answer;
-	}
-}
-console.log(wholeNum(-5));
+// var wholeNum = function(num) {
+// 	if(Math.sign(num) === -1) {
+// 		return false;
+// 	}
+// 	else {
+// 	var answer = Number.isInteger(num);
+// 	return answer;
+// 	}
+// }
+// console.log(wholeNum(-5));
 
 // 17
 
