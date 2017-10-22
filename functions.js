@@ -176,27 +176,66 @@
 
 //13
 
-var capitalize = function(sentence) {
-	var temp = sentence.toLowerCase().split(' ').map(function(word) {
-		 return word.replace(word[0], word[0].toUpperCase());
-	})
-	return temp.join(' ');
-}
-console.log(capitalize("I ate toast for breakfast"));
+// var capitalize = function(sentence) {
+// 	var temp = sentence.toLowerCase().split(' ').map(function(word) {
+// 		 return word.replace(word[0], word[0].toUpperCase());
+// 	})
+// 	return temp.join(' ');
+// }
+// console.log(capitalize("I ate toast for breakfast"));
 
 //14 
 // create 3 variables to hold the days, months and years and compare the two dates
 
 // var daysBetween = function(date1, date2) {
-// 	var years = 
+// 	var years = d
 // 	var months = 
 // 	var days =
 // }
+var compareDates = function(date1, date2) {
 
+	var newDate1 = new Date(date1);
+	var newDate2 = new Date(date2);
+	var diffInTime = Math.abs(newDate2.getTime() - newDate1.getTime());
+	var dayDiff = Math.ceil(diffInTime / (1000 * 3600 * 24));
+	return dayDiff;
+
+
+	// // var newDate1 = date1.split('/');
+	// // var newDate2 = date2.split('/');
+	// var x = date1.getTime();
+	// return x;
+	// var oneDay = 24*60*60*1000
+	// // var firstDate = new Date(2008, 01, 12);
+	// // var secondDate = new Date(2008, 01, 22);
+
+	// var compare = Math.round(Math.abs((newDate1.getTime() - newDate2.getTime())/(oneDay)));
+
+	// return compare;
+// var newDate1 = date1.split('/');
+	// var newDate2 = date2.split('/');
+	// 
+
+	// newDate1 = new Date(date1[0], date1[1], date1[2]);
+	// newDate2 = new Date(date2[0], date2[1], date2[2]);
+
+	// newDate1InSeconds = parseInt(newDate1.getTime() / 1000);
+	// newDate2InSeconds = parseInt(newDate2.getTime() / 1000);
+
+	// var secondsDiff = newDate2InSeconds - newDate1InSeconds;
+	// var hourDiff = secondsDiff / 60 / 60;
+	// var dayDiff = hourDiff / 24;
+
+	// return dayDiff;
+}
+
+console.log(compareDates("1998/01/26", "1999/01/25"));
 //15
+// var addTogether = function() {
 
+// }
 //16
-// need to make negatives false
+
 // var wholeNum = function(num) {
 // 	if(Math.sign(num) === -1) {
 // 		return false;
@@ -206,7 +245,7 @@ console.log(capitalize("I ate toast for breakfast"));
 // 	return answer;
 // 	}
 // }
-// console.log(wholeNum(-5));
+// console.log(wholeNum(.005));
 
 // 17
 
