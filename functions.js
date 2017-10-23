@@ -192,48 +192,26 @@
 // 	var months = 
 // 	var days =
 // }
-var compareDates = function(date1, date2) {
+// var compareDates = function(date1, date2) {
 
-	var newDate1 = new Date(date1);
-	var newDate2 = new Date(date2);
-	var diffInTime = Math.abs(newDate2.getTime() - newDate1.getTime());
-	var dayDiff = Math.ceil(diffInTime / (1000 * 3600 * 24));
-	return dayDiff;
-
-
-	// // var newDate1 = date1.split('/');
-	// // var newDate2 = date2.split('/');
-	// var x = date1.getTime();
-	// return x;
-	// var oneDay = 24*60*60*1000
-	// // var firstDate = new Date(2008, 01, 12);
-	// // var secondDate = new Date(2008, 01, 22);
-
-	// var compare = Math.round(Math.abs((newDate1.getTime() - newDate2.getTime())/(oneDay)));
-
-	// return compare;
-// var newDate1 = date1.split('/');
-	// var newDate2 = date2.split('/');
-	// 
-
-	// newDate1 = new Date(date1[0], date1[1], date1[2]);
-	// newDate2 = new Date(date2[0], date2[1], date2[2]);
-
-	// newDate1InSeconds = parseInt(newDate1.getTime() / 1000);
-	// newDate2InSeconds = parseInt(newDate2.getTime() / 1000);
-
-	// var secondsDiff = newDate2InSeconds - newDate1InSeconds;
-	// var hourDiff = secondsDiff / 60 / 60;
-	// var dayDiff = hourDiff / 24;
-
-	// return dayDiff;
-}
-
-console.log(compareDates("1998/01/26", "1999/01/25"));
-//15
-// var addTogether = function() {
-
+// 	var newDate1 = new Date(date1);
+// 	var newDate2 = new Date(date2);
+// 	var diffInTime = Math.abs(newDate2.getTime() - newDate1.getTime());
+// 	var dayDiff = Math.ceil(diffInTime / (1000 * 3600 * 24));
+// 	return dayDiff;
 // }
+
+// console.log(compareDates("1998/01/26", "1999/01/25"));
+//15
+var addTogether = function(num1, num2) {
+	if (arguments.length === 1) {
+		return function(num3) {
+			return num1 + num3;
+		};
+	}
+	return num1 + num2;
+};
+console.log(addTogether(4)(6));
 //16
 
 // var wholeNum = function(num) {
